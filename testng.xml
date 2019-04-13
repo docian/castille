@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="test.rest.TestUsers">
+      	<parameter name="baseUrl" value="https://jsonplaceholder.typicode.com/todos"/>
+      	<parameter name="endpoint" value="/1"/>
+      	<parameter name="schema" value="user_schema.json"/>
+      	<parameter name="node_value" value="title"/>
+      	<parameter name="node_path" value="$"/>
+      	<parameter name="node_name" value="title"/>
+      	<parameter name="value" value="delectus aut autem"/>
+      </class>
+      <class name="test.ui.login.Login">
+      	<parameter name="url" value="https://www.vodafone.com.mt/home"/>
+      	<parameter name="landingPageUrl" value="https://www.vodafone.com.mt/myVodafone-postpaid"/>
+      	<parameter name="user" value="testqa2"/>
+      	<parameter name="password" value="Voda1234"/>
+      	<parameter name="expectedText" value="My Pending Balance is :"/>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
